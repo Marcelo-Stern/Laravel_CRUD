@@ -17,7 +17,7 @@ use App\Models\Produto;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
-    return view('inicio');
+    return view('principal');
 });
 
 Route::post('/cadastrar-produto',function(Request $request){
