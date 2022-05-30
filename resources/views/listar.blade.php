@@ -8,14 +8,28 @@
     <body>
         <h1>Produtos</h1>
 
-        <label for="lblNome">Nome:</label>
-        <input type="text" name="nome" value="{{ $produto->nome }}">
-        <br><br>
-        <label for="lblValor">Valor:</label>
-        <input type="text" name="valor" value="{{ $produto->valor }}">
-        <br><br>
-        <label for="lblQuantidade">Quantidade:</label>
-        <input type="text" name="estoque" value="{{ $produto->estoque }}">
-        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>Nome</td>
+                    <td>Valor</td>
+                    <td>Quantidade</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+        <tbody>
+            foreach($clients as $client){
+                $produto .= '<tr>';
+                $produto .= "<td><input type='checkbox' value='{$produto->id}'></td>";
+                $produto .= "<td>{$produto->id}</td>";
+                $produto .= "<td>{produto->Nome</td>";
+                $produto .= "<td>{$produto->Valor}</td>";
+                $produto .= "<td>{$produto->Quantidade}</td>";
+                $produto .= "<td><a class='bnt btn-info' href='/editar-produto/{id}'>Editar</a></td>";
+                $produto .= "<td><a class='bnt btn-info' href='client/delete/{$client->id}'>Excluir</a></td>";
+                $produto .= '</tr>';
+        </tbody>
     </body>
 <html>

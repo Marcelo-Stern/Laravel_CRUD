@@ -8,7 +8,7 @@
     <body>
         <h1>Produtos</h1>
 
-        <form action="/editar-produto/{{ $produto-> id }}" method="POST">
+        <form action="/editado-produto/{{ $produto-> id }}" method="POST">
             @csrf
             <label for="lblNome">Nome:</label>
             <input type="text" name="nome" value="{{ $produto->nome }}">
@@ -19,7 +19,8 @@
             <label for="lblQuantidade">Quantidade:</label>
             <input type="text" name="estoque" value="{{ $produto->estoque}}">
             <br><br>
-            <button>Cadastrar</button>
+            <button>Editar</button>
         </form>
+        <a href="/listar-produto"><button>Listar</button><a>
     </body>
 </html>

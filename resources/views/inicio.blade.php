@@ -8,7 +8,7 @@
     <body>
         <h1>Produtos</h1>
 
-        <form action="/cadastrar-produto" method="POST">
+        <form action="/cadastrado-produto" method="POST">
             @csrf
             <label for="lblNome">Nome:</label>
             <input type="text" name="nome">

@@ -20,7 +20,11 @@ Route::get('/', function () {
     return view('principal');
 });
 
-Route::post('/cadastrar-produto',function(Request $request){
+Route::get('/cadastrar-produto', function(){
+    return view('inicio');
+});
+
+Route::post('/cadastrado-produto',function(Request $request){
     //dd($request->all());
 
     Produto::create([
@@ -44,7 +48,7 @@ Route::get('/editar-produto/{id}', function($id){
     return view('editar', ['produto' => $produto]);
 });
 
-Route::post('/editar-produto/{id}', function(Request $request, $id){
+Route::post('/editado-produto/{id}', function(Request $request, $id){
     //dd($request->all());
     $produto = Produto::find($id);
 

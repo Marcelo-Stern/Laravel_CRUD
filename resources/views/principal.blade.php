@@ -10,8 +10,6 @@
         
             <a href="/cadastrar-produto"><button>Cadastrar</button></a>
             <a href="/listar-produto"><button>Listar</button></a>
-            <a href="/editar-produto/{id}"><button>Atualizar</button></a>
-            <a href="/excluir-produto/{id}"><button>Deletar</button></a>
         </form>
     </body>
 </html>
