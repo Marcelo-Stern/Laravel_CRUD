@@ -6,30 +6,34 @@
         <title>Produtos</title>
     </head>
     <body>
-        <h1>Produtos</h1>
-
-        <table>
-            <thead>
-                <tr>
-                    <td>id</td>
+        <div>
+            <br>
+            @csrf
+            <table>
+                <h1>Produtos</h1>
+                <thead>
+                    <td>#</td>
                     <td>Nome</td>
                     <td>Valor</td>
-                    <td>Quantidade</td>
+                    <td>Estoque</td>
                     <td></td>
                     <td></td>
-                </tr>
-            </thead>
-        <tbody>
-            foreach($clients as $client){
-                $produto .= '<tr>';
-                $produto .= "<td><input type='checkbox' value='{$produto->id}'></td>";
-                $produto .= "<td>{$produto->id}</td>";
-                $produto .= "<td>{produto->Nome</td>";
-                $produto .= "<td>{$produto->Valor}</td>";
-                $produto .= "<td>{$produto->Quantidade}</td>";
-                $produto .= "<td><a class='bnt btn-info' href='/editar-produto/{id}'>Editar</a></td>";
-                $produto .= "<td><a class='bnt btn-info' href='client/delete/{$client->id}'>Excluir</a></td>";
-                $produto .= '</tr>';
-        </tbody>
+                </thead>
+                <?php
+                    foreach($produto as $element){
+                        echo "<tr>";
+                        echo "<td>$element->id</td>";
+                        echo "<td>$element->nome</td>";
+                        echo "<td>R$$element->valor</td>";
+                        echo "<td>$element->estoque</td>";
+                        echo "<td><button onclick='document.location=\"/editar-produto/{id}"'>Editar</button></td>";
+                        echo "<td><button onclick='document.location=\"/excluir-produto/{id}"'>Excluir</button></td>";
+                        echo "</tr>";
+                    }
+                ?>
+                </table>
+                <div>
+                    <button onclick="document.location = '/cadastrar-produto';">Cadastrar Novo</button>
+                </div>
     </body>
 <html>
