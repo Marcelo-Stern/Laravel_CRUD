@@ -26,14 +26,11 @@
                         echo "<td>$element->nome</td>";
                         echo "<td>R$$element->valor</td>";
                         echo "<td>$element->estoque</td>";
-                        echo "<td><button onclick='document.location=\"/editar-produto/{id}"'>Editar</button></td>";
-                        echo "<td><button onclick='document.location=\"/excluir-produto/{id}"'>Excluir</button></td>";
+                        echo "<td><a href=/editar-produto/{$element->id}><button>Editar</button></a></td>";
+                        echo "<td><a href=/excluir-produto/{$element->id}><button>Excluir</button></a></td>";
                         echo "</tr>";
                     }
                 ?>
-                </table>
-                <div>
-                    <button onclick="document.location = '/cadastrar-produto';">Cadastrar Novo</button>
-                </div>
+            </table>
     </body>
 <html>

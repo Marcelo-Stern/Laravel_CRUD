@@ -36,9 +36,8 @@ Route::post('/cadastrado-produto',function(Request $request){
     echo "Produto criado com sucesso!";
 });
 
-Route::get('/listar-produto/{id}', function($id){
-    //dd(Produto::find($id)); //debug and die
-    $produto = Produto::find($id);
+Route::get('/listar-produto', function(){
+    $produto = Produto::all();
     return view('listar', ['produto' => $produto]);
 });
 
